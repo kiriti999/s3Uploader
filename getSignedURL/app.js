@@ -31,6 +31,7 @@ const getUploadURL = async function(event) {
   const randomID = parseInt(Math.random() * 10000000)
   const Key = `${randomID}.jpg`
 
+  console.log("🚀 ~ getUploadURL ~ Key:", Key)
   // Get signed URL from S3
   const s3Params = {
     Bucket: process.env.UploadBucket,
